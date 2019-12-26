@@ -16,3 +16,4 @@ class Message(db.Model):
     sender = db.Column(db.String, unique=False)
     recipient = db.Column(db.String, unique=False)
     messagetext = db.Column(db.String, unique=False)
+    messageread = db.Column(db.Boolean, default=False)

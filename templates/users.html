@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <div class="row">
+          <div class="col-lg-12 col-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">All Users</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                  <tr><th>User</th><th>Email Address</th><th>Deleted</th><th>&nbsp;</th></tr>
+                  {% for user in users %}
+                  <tr><td><a href="/users/{{user.id}}">{{ user.name }}</a></td><td>{{ user.email }}</td><td>{{ user.deleted }}</td><td><a href="/users/{{user.id}}" class="btn btn-default">Details</a></td></tr>
+                  {% endfor %}
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+
+{% endblock content %}

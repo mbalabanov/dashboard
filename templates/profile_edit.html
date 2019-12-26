@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="row">
+          <div class="col-lg-12 col-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Edit {{user.name}}</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+
+                <form method="POST">
+                    <div class="form-group">
+                        <strong>Your name:</strong><br><input type="text" class="form-control" name="profile-name" placeholder="Enter your name" value="{{ user.name }}"><br>
+                        <strong>Your email addresss:</strong><br><input type="email" class="form-control" name="profile-email" placeholder="Enter your email address" value="{{ user.email }}"><br>
+                        <p>Fill out to change your password:</p>
+                        <strong>Previous password:</strong><br><input type="password" name="previous-password"  class="form-control" name="profile-previous-password" >
+                        <strong>New password: </strong><br><input type="password" name="new-password" class="form-control" name="profile-new-password" ><br>
+                        <button class="btn btn-primary"><i class="fas fa-arrow-circle-up"></i>&nbsp;Submit</button>
+                    </div>
+                </form>
+
+                <p><a href="/profile/delete" class="btn btn-danger"><i class="far fa-trash-alt"></i>&nbsp;Delete profile</a></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+{% endblock content %}

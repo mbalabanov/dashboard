@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Registration</title>
+  <title>Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="static/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="static/https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="static/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
@@ -18,26 +18,16 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition register-page">
-<div class="register-box">
-  <div class="login-logo">
-    Register
-  </div>
+<body class="hold-transition login-page">
+<div class="login-box">
   <div class="card">
-    <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new user</p>
+    <div class="card-body login-card-body">
+      <h1 class="login-box-msg">You are now logged out</h1>
+      <p class="login-box-msg">Log in to start a new session</p>
 
-      <form method="post" action="/register">
+      <form method="post" action="/login">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name" name="user-name">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" name="user-email">
+          <input type="email" class="form-control" placeholder="Email" name="user-email" >
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -45,7 +35,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" name="user-password">
+          <input type="password" class="form-control" placeholder="Password" name="user-password" >
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -53,21 +43,21 @@
           </div>
         </div>
         <div class="row">
-          <!-- /.col -->
           <div class="col-5">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" class="btn btn-primary btn-block">Log In</button>
           </div>
+          <!-- /.col -->
           <div class="col-7">
-            <a href="/" type="button" class="btn btn-secondary btn-block">Back to Login</a>
+            <a href="/register" class="text-center">Register a new user</a>
           </div>
           <!-- /.col -->
         </div>
       </form>
     </div>
-    <!-- /.form-box -->
-  </div><!-- /.card -->
+    <!-- /.login-card-body -->
+  </div>
 </div>
-<!-- /.register-box -->
+<!-- /.login-box -->
 
 <!-- jQuery -->
 <script src="static/plugins/jquery/jquery.min.js"></script>
@@ -75,5 +65,6 @@
 <script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="static/dist/js/adminlte.min.js"></script>
+
 </body>
 </html>
