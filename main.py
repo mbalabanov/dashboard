@@ -26,8 +26,7 @@ def index():
         return render_template("dashboard.html", user=user, messages=mymessages, messagebadge=messagebadge, weatheroutput=output.json())
     else:
         user = None
-
-    return render_template("index.html", user=user)
+        return render_template("index.html", user=user)
 
 @app.route("/login", methods=["POST"])
 def login():
